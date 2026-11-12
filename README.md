@@ -55,8 +55,12 @@ Concernant les principales visualisations issues de l'analyse pour connaitre d'a
 On passe maintenant à l’étape Machine learning afin d’identifier les variables les plus pertinantes pour la predection du départ.
 
 ## Modélisation : 
-
-<img width="1177" height="459" alt="image" src="https://github.com/user-attachments/assets/d896e381-1d59-4e30-8f82-2b52050c0ea5" />
-
+Donc 2 modeles ont été realisés, la il s’agit d’un tableau de comparaison de performance des 2 modeles àtravers plusieurs métriques
+<img width="1177" height="300" alt="image" src="https://github.com/user-attachments/assets/d896e381-1d59-4e30-8f82-2b52050c0ea5" />
+-	Concerant  l’Accuracy, la RL obtient 71% contre 82% pour le RF, donc on observe une meilleure performance globale pour le random forest
+-	Ensuite les 2 modeles ont une capacité similaire à identifier les client qui vont réelement partir (rappel classe 1)
+-	Ce qui concerne les faux négatifs c’est à dire les clients qui vont réellement partir mais que le modele n’a pas identifié comme tels, la aussi les résultats sont très proche
+-	EN revanche les faux positif  l’écart est très important, le RF est bien plus précis que la RL donc il ne fait que 237 fausse alertes contre 464 pour la RL.
+Au regard de l’ensemble de ces indicateurs le random forest qui a été retenu grace à sa meilleur accuracy et à son nombre plus faible de faux positifs 
 
 
