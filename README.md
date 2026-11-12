@@ -79,6 +79,3 @@ Les modèles testés montrent qu'il est possible d'anticiper le départ des clie
  La variable Complain (plainte) a été exclue de la modélisation pour éviter une fuite de données. Or, dans la réalité, une plainte est souvent le tout premier signe d'un départ imminent.
 - Perspective : 
  Les moyens et ressources nécessaires pour analyser le contenu de ces plaintes ne sont pas disponibles à ce stade. Comprendre la cause racine de l'insatisfaction reste une piste ouverte pour de futures recherches.
-<img width="2516" height="42" alt="image" src="https://github.com/user-attachments/assets/d42d120e-35f7-48ef-9f45-19fbaa322f37" />
-
-
