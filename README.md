@@ -28,7 +28,7 @@ La variable cible qui nous intéresse particulièrement est Exited qui nous perm
 0 : le client est toujours présent.
 1 : le client a quitté la banque.
 
-## Etape I EDA :
+## EDA :
 
 Avant de commencer l’analyse, j'ai effectué un 1 er contrôle de qualité des données, le dataset est relativement propre puisque on n’a ni doublons ni valeurs manquantes.
 
@@ -56,11 +56,29 @@ On passe maintenant à l’étape Machine learning afin d’identifier les varia
 
 ## Modélisation : 
 Donc 2 modeles ont été realisés, la il s’agit d’un tableau de comparaison de performance des 2 modeles àtravers plusieurs métriques
-<img width="1177" height="300" alt="image" src="https://github.com/user-attachments/assets/d896e381-1d59-4e30-8f82-2b52050c0ea5" />
+<img width="1177" height="200" alt="image" src="https://github.com/user-attachments/assets/d896e381-1d59-4e30-8f82-2b52050c0ea5" />
 -	Concerant  l’Accuracy, la RL obtient 71% contre 82% pour le RF, donc on observe une meilleure performance globale pour le random forest
 -	Ensuite les 2 modeles ont une capacité similaire à identifier les client qui vont réelement partir (rappel classe 1)
 -	Ce qui concerne les faux négatifs c’est à dire les clients qui vont réellement partir mais que le modele n’a pas identifié comme tels, la aussi les résultats sont très proche
 -	EN revanche les faux positif  l’écart est très important, le RF est bien plus précis que la RL donc il ne fait que 237 fausse alertes contre 464 pour la RL.
 Au regard de l’ensemble de ces indicateurs le random forest qui a été retenu grace à sa meilleur accuracy et à son nombre plus faible de faux positifs 
+
+Le modele confirme nos hypotheses : pour prédir le départ il faut d’abord regarder l’age et le nombre de produits 
+
+## Recommandation : 
+
+L’analyse des variables nous donne 3 recommandations claires : 
+1 erement, cibler en priorité les clients agés de 45 à 55 ans et les membres inactifs, car ce sont eux qui partent le plus, en mettant en place des offres de fidélisation
+2 ement, une alerte rouge sur la vente de produits, les clients qui ont 3 produits ou plus partent massivement , il faut en urgence revoir la stratégie de vente croisée,
+3 ement, le marché allemand est le point faible, la banque doit lancer une enquete de satisfaction locale particulier auprès de la clientèle féminine
+
+## Conclusion : 
+
+Les modèles testés montrent qu'il est possible d'anticiper le départ des clients d'une banque et d'agir avant qu'il ne se concrétise, à partir de données comportementales simples à collecter.
+- Limite du projet :
+ La variable Complain (plainte) a été exclue de la modélisation pour éviter une fuite de données. Or, dans la réalité, une plainte est souvent le tout premier signe d'un départ imminent.
+- Perspective : 
+ Les moyens et ressources nécessaires pour analyser le contenu de ces plaintes ne sont pas disponibles à ce stade. Comprendre la cause racine de l'insatisfaction reste une piste ouverte pour de futures recherches.
+<img width="2516" height="42" alt="image" src="https://github.com/user-attachments/assets/d42d120e-35f7-48ef-9f45-19fbaa322f37" />
 
 
